@@ -1,0 +1,22 @@
+{
+  "name": "express-exercises",
+  "version": "1.0.0",
+  "description": "The goal of these exercises are to become familiar with the basic concepts behind Express, in particularly how to route HTTP requests, and use middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanjscom/express-exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leanjscom/express-exercises/issues"
+  },
+  "homepage": "https://github.com/leanjscom/express-exercises#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
