@@ -41,4 +41,4 @@ On the command line, from inside this project's directory, add Express using NPM
 You will notice that express has been added to package.json as a dependency
 
 ### 4.  Fix the index script
-Have a look at index.js.  Try to use it by running 'node index.js' on the commad line.
+Have a look at index.js.  Try to use it by running 'node index.js' on the command line.
