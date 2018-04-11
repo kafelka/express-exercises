@@ -20,6 +20,11 @@ const render = (res, template, vars) => {
 	})
 }
 
+/**
+ * This function creates an object from two arrays
+ */
+const arrayCombine = (keys, values) => Object.assign( ...keys.map( (v, i) => ( {[v]: values[i]} ) ) )
+
 app.get("/", (req, res) => {
 	res.render("page", {
 		title: "Welcome to the homepage",
@@ -48,21 +53,31 @@ app.get("/plants", (req, res) => {
 
 app.get("/animals", (req, res) => {
 
-	render(res, "list", {
-		items: [
-			{ label: "Invertebrates" },
-			{ label: "Fish" },
-			{ label: "Reptiles" },
-			{ label: "Mammals" }
-		]
-	})
-	.then(listHtml => {
+	const pageParts = {
+		"heading": render(res, "pageheading", {
+			headingText: "List of animals"
+		}),
+		"list": render(res, "list", {
+			items: [
+				{ label: "Invertebrates" },
+				{ label: "Fish" },
+				{ label: "Reptiles" },
+				{ label: "Mammals" }
+			]
+		}),
+		"homelink": render(res, "homelink")
+	}
+
+	Promise.all(Object.values(pageParts))
+	.then(html => {
+		const pageHtml = arrayCombine(Object.keys(pageParts), html)
+
 		res.render("page", {
 			title: "List of animals",
 			content: `
-				<h1>List of animals</h1>
-				${listHtml}
-				<p><a href='/'>Home</a></p>
+				${pageHtml.heading}
+				${pageHtml.list}
+				${pageHtml.homelink}
 			`
 		})
 	})
