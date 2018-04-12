@@ -36,13 +36,25 @@ If you have time, try adding some routes to handle other HTTP methods, such as P
 You may have noticed that in Exercise 1 we used a lot of repeated HTML code.  One way to avoid this is to use a templating engine.  We will have a go using the templating engine Mustache.
 
 * Task 2.1 Install the package 'mustache-express'
-
 * Task 2.2 Correct the lines at the top of templating.js in which mustache is set up as the templating engine for the app
-
 * Task 2.3 Rewrite the route for 'plants' to use Mustache partial templates, as per the route for 'animals'
-
 * Task 2.4 Add your own templates and experiment with using them
 
+
+## Exercise 3 - Writing middleware
+Middleware is code that executes between a request being received, and the reponse being generated and output.
+
+You add middleware to a project in exactly the same way as you add route handlers, with the exception that you need to add a third parameter to the handler function, which is callback function called 'next', which you should call when you have done everything that your middleware needs to do.
+
+The purpose of the 'next' function is to instruct Express to move onto the next registered piece of middleware, or to the final route-handler function, if there is no more middleware to run.
+
+To add middleware to every request, you can call app.use and pass it your middleware function.
+
+Look at the file 'logger.js'
+
+* Task 3.1 Add some middleware to log the time, method, and url of every request.  You can use req.method, req.url and the normal Javascript date object to achieve this.
+* Task 3.2 Add some middleware to log the time of every GET request
+* Task 3.3 Add some middleware to log the time of every POST request
 
 
 ### 2.  Initialise the project as an NPM package

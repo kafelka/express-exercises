@@ -2,7 +2,7 @@ const express = require("express")
 
 const app = express()
 
-app.use(/* Add some middleware here that logs the time of EVERY request */)
+app.use(/* Add some middleware here that logs the time, method, and url, of EVERY request */)
 
 /* Add some middleware here that logs the time of GET requests only */
 
