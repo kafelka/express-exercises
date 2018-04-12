@@ -7,6 +7,16 @@ app.use((req, res, next) => {
 	next()
 })
 
+app.get("/", (req, res, next) => {
+	console.log(`${new Date} GET request`)
+	next()
+})
+
+app.post("/", (req, res, next) => {
+	console.log(`${new Date} POST request`)
+	next()
+})
+
 app.get("/", (req, res) => {
 	res.send("Hello, World!")
 })
