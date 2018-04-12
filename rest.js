@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 
 const app = express()
 
-// The body-parse is an example of middleware; it amends the incoming req object, adding req.body with appropriate data if it was available
+// The body-parser is an example of middleware; it amends the incoming req object, adding req.body with appropriate data if it was available
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
