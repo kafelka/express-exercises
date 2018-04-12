@@ -3,7 +3,6 @@ const bodyParser = require("body-parser");
 
 const app = express()
 
-// The body-parse is an example of middleware; it amends the incoming req object, adding req.body with appropriate data if it was available
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
@@ -13,10 +12,11 @@ app.get("/", (req, res) => {
 	res.json(notes)
 })
 
-
-/*
- * Add a POST endpoint here to accept a string and add it to 'notes'
- */
-
+app.post("/", (req, res) => {
+	if (req.body && req.body.text && typeof req.body.text == "string") {
+		notes.push(req.body.text)
+	}
+	res.json(notes)
+})
 
 app.listen(4000, () => console.log("Listening for connections on port 4000"))
