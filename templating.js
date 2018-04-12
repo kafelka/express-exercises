@@ -5,8 +5,10 @@ const app = express()
 const mustacheExpress = require('mustache-express')
 
 app.engine('mustache', mustacheExpress())
-app.set("view engine", "mustache")
-app.set("views", __dirname+"/views")
+
+// The following two lines are wrong.  You should correct them.
+app.set("view engine", "handlebars")
+app.set("views", __dirname+"/templates")
 
 app.get("/", (req, res) => {
 	res.render("page", {
@@ -18,6 +20,7 @@ app.get("/", (req, res) => {
 	})
 })
 
+// Can you rewrite this to use the Mustache partials, like the route for 'animals'?
 app.get("/plants", (req, res) => {
 	res.render("page", {
 		pageTitle: "List of plants",
@@ -46,5 +49,7 @@ app.get("/animals", (req, res) => {
 		]
 	})
 })
+
+// Add some more templates to the project, and experiment with using them
 
 app.listen(4000, () => console.log("Listening for connections on port 4000"))
