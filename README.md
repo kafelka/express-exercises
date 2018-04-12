@@ -17,13 +17,20 @@ Probably the easiest way is to install node from your package manager.  Follow t
 You also need to make sure you have git installed.  Follow the instructions on the Git project's website:
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-## Exercise
-We are going to make a very simple HTTP server that only works on your local computer, and responds "Hello World" to every request.  A good introductory exercise; perhaps also useful in certain [very specific circumstances](http://hasthelargehadroncolliderdestroyedtheworldyet.com/)
-
-### 1.  Clone this repository
+### Clone this repository
 On the command line, navigate to a suitable directory where you want to work, and use the 'Clone or download' option on the github repository page to clone the repository
 
 https://github.com/leanjscom/express-exercises
+
+## Exercise 1 - Basic Routing
+This exercise is to practise creating some routes to handle incoming requests.
+
+Have a look at the script 'index.js'.  It won't work at the moment because it is missing some code; add the missing code.  Once you have got it working, add another route to handle the URL '/plants', as per the instruction in the comment in the code.
+
+Then add a route to handle getting a specific plant by ID, using route parameters.
+
+If you have time, try adding some routes to handle other HTTP methods, such as POST, PUT, or DELETE; test them using cURL on the command line (POST is probably easiest to test like this)
+
 
 ### 2.  Initialise the project as an NPM package
 On the command line, navigate inside this project, and set-up a new NPM package by typing 'npm init' and accepting the default answer at all the prompts
