@@ -81,6 +81,10 @@ Have a look at the file rest.js.  It contains the bare-bones of a RESTful API.  
 * Task 4.1  Amend the two lines that add the bodyParser middleware to the app, so that it is applied to every incoming request
 * Task 4.2  Add a method to accept a new note via a POST request, and append it to the array 'notes'.  You should write any suitable data validation yourself.
 
+You can test your RESTful service using cURL on the command line, if you want.
+
+	curl http://localhost:4000
+	curl http://localhost:4000 -d foo=bar
 
 ## Exercise 5 - Useful middleware
 This exercise is free-form.  Experiment with the following commonly-used middleware, and any other middleware that you can find online.  Find out what it does, and try using it.
