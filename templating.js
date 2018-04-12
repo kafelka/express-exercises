@@ -8,23 +8,6 @@ app.engine('mustache', mustacheExpress())
 app.set("view engine", "mustache")
 app.set("views", __dirname+"/views")
 
-const render = (res, template, vars) => {
-	return new Promise((resolve, reject) => {
-		res.render(template, vars, (err, html) => {
-			if (err) {
-				reject(err)
-			} else {
-				resolve(html)
-			}
-		})
-	})
-}
-
-/**
- * This function creates an object from two arrays
- */
-const arrayCombine = (keys, values) => Object.assign( ...keys.map( (v, i) => ( {[v]: values[i]} ) ) )
-
 app.get("/", (req, res) => {
 	res.render("page", {
 		title: "Welcome to the homepage",
@@ -52,34 +35,15 @@ app.get("/plants", (req, res) => {
 })
 
 app.get("/animals", (req, res) => {
-
-	const pageParts = {
-		"heading": render(res, "pageheading", {
-			headingText: "List of animals"
-		}),
-		"list": render(res, "list", {
-			items: [
-				{ label: "Invertebrates" },
-				{ label: "Fish" },
-				{ label: "Reptiles" },
-				{ label: "Mammals" }
-			]
-		}),
-		"homelink": render(res, "homelink")
-	}
-
-	Promise.all(Object.values(pageParts))
-	.then(html => {
-		const pageHtml = arrayCombine(Object.keys(pageParts), html)
-
-		res.render("page", {
-			title: "List of animals",
-			content: `
-				${pageHtml.heading}
-				${pageHtml.list}
-				${pageHtml.homelink}
-			`
-		})
+	res.render("animals", {
+		"pageTitle": "List of animals",
+		"mainHeading": "List of animals",
+		"items": [
+			{ label: "Invertebrates" },
+			{ label: "Fish" },
+			{ label: "Reptiles" },
+			{ label: "Mammals" }
+		]
 	})
 })
 
