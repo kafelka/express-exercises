@@ -82,7 +82,18 @@ To get the middleware 'handler' function, you should call the express.static met
 Open up the 'static.js' file and try to add the code necessary to serve static files from the 'resources' directory.
 
 
-## Exercise 5 - Creating REST services
+## Exercise 5 - Using the Express Router
+
+The Express Router middleware allows you to create "mini-apps" that you can import into your project and attach to a path.
+
+Have a look at the "router.js" file; it loads a module called "minerals" and attaches it to the path 'minerals'.
+
+Except, of course, the module doesn't work.  Can you fix it?
+
+If you have time, add another router and attach it to a different path.
+
+
+## Exercise 6 - Creating REST services
 Express makes it very easy to create RESTful APIs.  You can use the res.json() method to send the appropriate headers and a response in JSON format.  You should also use the bodyParser middleware to parse incoming request bodies, which might be in JSON or URL-encoded format.
 
 Have a look at the file rest.js.  It contains the bare-bones of a RESTful API.  The 'notes' array will be used to simulate a database; in reality, it would be something that would persist if the node script ended, such as a permanent MongoDB database.
@@ -95,7 +106,8 @@ You can test your RESTful service using cURL on the command line, if you want.
 	curl http://localhost:4000
 	curl http://localhost:4000 -d foo=bar
 
-## Exercise 6 - Useful middleware
+
+## Exercise 7 - Useful middleware
 This exercise is free-form.  Experiment with the following commonly-used middleware, and any other middleware that you can find online.  Find out what it does, and try using it.
 
 * Express Router
