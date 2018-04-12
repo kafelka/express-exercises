@@ -17,8 +17,6 @@
   },
   "homepage": "https://github.com/leanjscom/express-exercises#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-    "mustache-express": "^1.2.5"
+    "express": "^4.16.3"
   }
 }
