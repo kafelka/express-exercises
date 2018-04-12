@@ -90,4 +90,19 @@ app.get("/plants/:plantName", (req, res) => {
 	`)
 })
 
+app.post("/plants", (req, res) => {
+	res.send(`
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<title>Thank you</title>
+			</head>
+			<body>
+				<p>Thank you for submitting a new plant!</p>
+				<p><a href='/'>Home</a></p>
+			</body>
+		</html>
+	`)	
+})
+
 app.listen(4000, () => console.log("Listening for connections on port 4000"))
