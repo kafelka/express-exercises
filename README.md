@@ -35,13 +35,13 @@ If you have time, try adding some routes to handle other HTTP methods, such as P
 ## Exercise 2 - Using templates
 You may have noticed that in Exercise 1 we used a lot of repeated HTML code.  One way to avoid this is to use a templating engine.  We will have a go using the templating engine Mustache.
 
-### Task 2.1 Install the package 'mustache-express'
+* Task 2.1 Install the package 'mustache-express'
 
-### Task 2.2 Correct the lines at the top of templating.js in which mustache is set up as the templating engine for the app
+* Task 2.2 Correct the lines at the top of templating.js in which mustache is set up as the templating engine for the app
 
-### Task 2.3 Rewrite the route for 'plants' to use Mustache partial templates, as per the route for 'animals'
+* Task 2.3 Rewrite the route for 'plants' to use Mustache partial templates, as per the route for 'animals'
 
-### Task 2.4 Add your own templates and experiment with using them
+* Task 2.4 Add your own templates and experiment with using them
 
 
 
