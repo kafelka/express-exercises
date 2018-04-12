@@ -16,4 +16,11 @@ app.get("/", (req, res) => {
 	`)
 })
 
+
+/*
+ * Add another route here that outputs list of types of plants at the URL /plants
+ * Try adding some POST routes as well...
+ */
+
+
 app.listen(4000, () => console.log("Listening for connections on port 4000"))
