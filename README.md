@@ -79,5 +79,5 @@ Express makes it very easy to create RESTful APIs.  You can use the res.json() m
 Have a look at the file rest.js.  It contains the bare-bones of a RESTful API.  The 'notes' array will be used to simulate a database; in reality, it would be something that would persist if the node script ended, such as a permanent MongoDB database.
 
 * Task 4.1  Amend the two lines that add the bodyParser middleware to the app, so that it is applied to every incoming request
-* Task 4.2  Add a method to accept a new note via a POST request, and append it to the array 'notes'
+* Task 4.2  Add a method to accept a new note via a POST request, and append it to the array 'notes'.  You should write any suitable data validation yourself.
 
