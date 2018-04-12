@@ -1,4 +1,5 @@
-
+const express = require("express")
+const router = express.Router()
 
 router.get("/solid", (req, res) => {
 	res.send("<ul><li>Calcium</li><li>Iron</li></ul>")
