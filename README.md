@@ -73,3 +73,11 @@ Look at the file 'logger.js'
 * Task 3.3 Add some middleware to log the time of every POST request
 
 
+## Exercise 4 - Creating REST services
+Express makes it very easy to create RESTful APIs.  You can use the res.json() method to send the appropriate headers and a response in JSON format.  You should also use the bodyParser middleware to parse incoming request bodies, which might be in JSON or URL-encoded format.
+
+Have a look at the file rest.js.  It contains the bare-bones of a RESTful API.  The 'notes' array will be used to simulate a database; in reality, it would be something that would persist if the node script ended, such as a permanent MongoDB database.
+
+* Task 4.1  Amend the two lines that add the bodyParser middleware to the app, so that it is applied to every incoming request
+* Task 4.2  Add a method to accept a new note via a POST request, and append it to the array 'notes'
+
