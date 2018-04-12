@@ -73,7 +73,16 @@ Look at the file 'logger.js'
 * Task 3.3 Add some middleware to log the time of every POST request
 
 
-## Exercise 4 - Creating REST services
+## Exercise 4 - Serving static files
+
+Express has a built in middleware function called 'static' that is used to serve static files from a directory.
+
+To get the middleware 'handler' function, you should call the express.static method, and pass in the name of the directory to be used as the root for the static files.
+
+Open up the 'static.js' file and try to add the code necessary to serve static files from the 'resources' directory.
+
+
+## Exercise 5 - Creating REST services
 Express makes it very easy to create RESTful APIs.  You can use the res.json() method to send the appropriate headers and a response in JSON format.  You should also use the bodyParser middleware to parse incoming request bodies, which might be in JSON or URL-encoded format.
 
 Have a look at the file rest.js.  It contains the bare-bones of a RESTful API.  The 'notes' array will be used to simulate a database; in reality, it would be something that would persist if the node script ended, such as a permanent MongoDB database.
@@ -86,7 +95,7 @@ You can test your RESTful service using cURL on the command line, if you want.
 	curl http://localhost:4000
 	curl http://localhost:4000 -d foo=bar
 
-## Exercise 5 - Useful middleware
+## Exercise 6 - Useful middleware
 This exercise is free-form.  Experiment with the following commonly-used middleware, and any other middleware that you can find online.  Find out what it does, and try using it.
 
 * Express Router
