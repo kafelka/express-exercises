@@ -2,7 +2,10 @@ const express = require("express")
 
 const app = express()
 
-app.use(/* Add your middleware here */)
+app.use((req, res, next) => {
+	console.log(`${new Date} ${req.method} ${req.url}`)
+	next()
+})
 
 app.get("/", (req, res) => {
 	res.send("Hello, World!")
