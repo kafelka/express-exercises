@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.get("/plants", (req, res) => {
 	res.render("page", {
-		title: "List of plants",
+		pageTitle: "List of plants",
 		content: `
 			<h1>List of plants</h1>
 			<ul>
@@ -35,7 +35,7 @@ app.get("/plants", (req, res) => {
 })
 
 app.get("/animals", (req, res) => {
-	res.render("animals", {
+	res.render("animalspage", {
 		"pageTitle": "List of animals",
 		"mainHeading": "List of animals",
 		"items": [
